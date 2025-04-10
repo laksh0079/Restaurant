@@ -1,0 +1,256 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #2F4858;
+	color: #f3f3f3;
+	font-family: "DM sans";
+}
+
+.nav {
+	height: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: auto;
+	font-family: "Rubik";
+	/*background-color: #2F4858;*/
+}
+
+.back-svg {
+	margin-left: 3rem;
+	cursor: pointer;
+}
+
+#heading {
+	font-family: Outfit;
+}
+
+.fav-svg {
+	margin-right: 3rem;
+	cursor: pointer;
+}
+
+.main-container {
+	background-color: #111111;
+	border-radius: 100px 100px 0 0;
+	padding-top: 4rem;
+	padding-right: 2rem;
+	padding-left: 2rem;
+	display: flex;
+	flex-flow: row;
+	min-height: 80vh;
+	max-height: auto;
+}
+
+
+.order-summary-container {
+	min-width: 60%;
+	height: auto;
+	flex-basis: 200px;
+}
+
+.order-summary-container h1 {
+	color: #BABABA;
+	text-align: center;
+}
+
+.order-summary {
+	width: auto;
+	display: flex;
+	height: 150px;
+	padding: 10px;
+	align-items: center;
+	margin: 15px 15px 15px 0;
+	border-radius: 20px;
+	background-color: #B9FFB7;
+}
+
+img {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.img-cont {
+	display: flex;
+	align-items: center;
+}
+
+h3 {
+	display: block;
+	color: #111111;
+	font-family: "Space Grotesk";
+}
+
+
+.price-cont {
+	grid-area: 2 / 1;
+}
+
+.add-cont {
+	grid-area: 1 / 2 / 3 / 3;
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 10px;
+	justify-content: center;
+}
+
+.desc {
+	display: grid;
+	gap: 18px;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.desc-cont {
+	margin-left: 1rem;
+	width: 100%;
+}
+
+span,
+p{
+	font-family: Rubik;
+	font-size: 0.9em;
+}
+
+.info {
+	font-family: "Space Grotesk";
+	color: #265E5D;
+	font-size: 0.8em;
+}
+
+.price {
+	font-family: Rubik;
+	color: #010073;
+}
+
+.line {
+	width: 2px;
+	height: 100%;
+	background-color: black;
+}
+
+.quantity {
+	color: #E30000;
+	font-size: 1.2em;
+	margin: 0 3px;
+}
+
+.checkout-container {
+	width: 100%;
+	height: max-content;
+	flex-basis: auto;
+	background-color: #A6A2A2;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.checkout {
+	display: grid;
+	grid-template-columns: 3fr auto;
+	grid-template-rows: repeat(auto, auto);
+	row-gap: 1rem;
+}
+
+.discount,
+.tax{
+	position: relative;
+}
+
+.tax-div {
+	margin-bottom: 10px;
+}
+
+.total-underline::before {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: -3px;
+	width: 110%;
+	background-color: #111111;
+	height: 1px;
+}
+
+.checkout div {
+	display: flex;
+	align-items: center;
+}
+
+.checkout-container .checkout span {
+	display: flex;
+	align-items: center;
+	
+}
+
+.checkout-container h1 {
+	color: #1D1A1A;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+	.main-container {
+		display: flex;
+		border-radius: 70px 70px 0 0;
+		flex-wrap: wrap;
+	}
+	
+	.order-summary-container {
+		min-width: 100%;
+		min-height: 100%;
+	}
+	
+	.order-summary {
+		min-width: 95%;
+	}
+	
+	h1 {
+		font-size: 1.4em;
+	}
+	
+	.line {
+		display: none;
+	}
+	
+	.checkout-container h1{
+		font-size: 1.7em;
+		text-align: center;
+	}
+	
+	h3 {
+		font-size: 0.8em;
+	}
+}
+
+body::before {
+	content: 'Cannot exceed cart limit!';
+	position: fixed;
+	top: 87%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+	background-color: rgba(47, 47, 52, 0.8);
+	color: #f3f3f3;
+	padding: 10px;
+	border-radius: 10px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	z-index: 10000;
+	box-shadow: none;
+}
+
+body.show-after::before {
+	visibility: visible;
+	opacity: 1;
+	box-shadow: 1px 1px 15px rgba(1, 1, 1, 0.8);
+	transition: all 0.2s ease-in-out;
+}
+
+.minus-quantity-svg,
+.plus-quantity-svg {
+	fill: #281818;
+}

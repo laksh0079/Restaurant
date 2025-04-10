@@ -1,0 +1,85 @@
+.feedback {
+	margin-top: 3rem;
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	background-color: #121214;
+}
+
+.fb-cont {
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid #f2f2f2;
+	position: relative;
+	border-radius: 5px ;
+	padding: 2rem;
+}
+
+.fb-heading {
+	position: absolute;
+	top: -28px;
+	left: 10%;
+	font-size: 2em;
+	background-color: #121214;
+	padding: 0 20px;
+	font-family: Cinzel;
+	color: #F2F2F2;
+}
+
+label {
+	display: block;
+	font-family: Poppins;
+	font-weight: 700;
+	color: #A2EDD3;
+	margin-bottom: 1rem;
+	font-size: 1.3em;
+}
+
+input[type="text"] {
+	border: 0;
+	border-bottom: 1px solid skyblue;
+	background-color: transparent;
+	height: 40px;
+	padding: 3px;
+	font-family: Lora;
+	padding-left: 15px;
+	width: 400px;
+	outline: none;
+	margin-bottom: 2rem;
+	color: #f2f2f2;
+}
+
+textarea {
+	border: 0;
+	background-color: transparent;
+	border-bottom: 1px solid skyblue;
+	outline: none;
+	color: #f2f2f2;
+}
+
+.submit-btn {
+	width: 200px;
+	height: 50px;
+	color: #121214;
+	background-color: #BEBEBE;
+	font-size: 1em;
+	font-family: Poppins;
+	font-weight: 700;
+	border: 0;
+	border-radius: 10px;
+	margin-top: 2rem;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 480px){
+	
+	input[type="text"] {
+		width: 80%;
+	}
+	
+	textarea{
+		width: 85%;
+	}
+	
+	
+}

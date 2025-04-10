@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #060606;
+	color: #fff;
+}
+
+h1, h2 {font-family: Outfit;}
+
+.hero-section {
+	background: url('/images/about-bg.jpg') center/cover no-repeat;
+	background: linear-gradient(rgba(0,0,0,0.8));
+	height: 25rem;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Open Sans';
+	padding: 0 1.2rem;
+	position: relative;
+}
+
+.home-icon {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+}
+
+.home-icon:hover {
+	fill: yellow;
+}
+
+.hero-section p {
+	text-align: center;
+	margin-top: 1.2rem;
+	line-height: 1.5rem;
+}
+
+.main-section {
+	padding: 0 2rem;
+	font-family: 'Open Sans';
+}
+
+.main-section h2 {
+	margin: 1.2rem 0;
+	color: #C90000;
+}
+
+.main-section p,
+.why-choose-us-container p{
+	font-size: 0.9em;
+	line-height: 1.4rem;
+}
+
+.why-choose-us-container {
+	font-family: 'Open Sans';
+	padding: 0 2rem;
+}
+
+.why-choose-us-container h2 {
+	color: #C90000;
+	margin: 1.7rem 0;
+	line-height: 1.4rem;
+}
+
+.team-info-section {
+	padding: 0 2rem;
+	padding-bottom: 2rem;
+}
+
+.team-info-section h1 {
+	color: #C90000;
+	margin: 1.8rem 0;
+}
+
+.team-info h2 {
+	margin: 1.3rem 0;
+}
+
+.team-info p {
+	color: whitesmoke;
+	line-height: 1.4rem;
+}
+
+.footer {
+	background-color: black;
+}
+
+@media (min-width: 480px) and (max-width: 786px){
+	.hero-section {
+		height: 30rem;
+	}
+	
+	
+}
+
+@media (min-width: 787px){
+	.hero-section {
+		height: 100vh;
+	}
+	
+	.main-section{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 10px;
+	}
+	
+	.team-info {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 10px;
+	}
+}
